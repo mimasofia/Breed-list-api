@@ -3,7 +3,7 @@ class BreedListsController < ProtectedController
 
   # GET /breed_lists
   def index
-    @breed_lists = BreedList.all
+    @breed_lists = current_user.breed_lists.all
 
     render json: @breed_lists
   end
@@ -15,7 +15,7 @@ class BreedListsController < ProtectedController
 
   # POST /breed_lists
   def create
-    @breed_list = BreedList.new(breed_list_params)
+    @breed_list = current_user.breed_lists.build(breed_list_params)
 
     if @breed_list.save
       render json: @breed_list, status: :created, location: @breed_list
@@ -41,7 +41,7 @@ class BreedListsController < ProtectedController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_breed_list
-      @breed_list = BreedList.find(params[:id])
+      @breed_list = current_user.breed_lists.find(params[:id])
     end
 
     # Only allow a trusted parameter "white list" through.

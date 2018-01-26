@@ -3,5 +3,5 @@
 class User < ApplicationRecord
   include Authentication
   has_many :examples
-  # has_many :breed_lists
+  has_many :breed_lists
 end
