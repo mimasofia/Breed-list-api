@@ -1,0 +1,2 @@
+class BreedList < ApplicationRecord
+end
