@@ -1,4 +1,4 @@
-class BreedListsController < ApplicationController
+class BreedListsController < ProtectedController
   before_action :set_breed_list, only: [:show, :update, :destroy]
 
   # GET /breed_lists
