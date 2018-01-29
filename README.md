@@ -1,1 +1,1 @@
-This is the start of my api project which I have named Breed-list
+This is a breed-list-api. The idea behind this was when a person is considerin buying a dog they should do research on different dog breeds to see how big they will get as well as their different requirenmtents. So this list is were they can store their ideas so far. Somthing like their 'considering' list. 
